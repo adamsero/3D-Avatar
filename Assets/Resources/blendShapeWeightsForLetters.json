@@ -1,0 +1,333 @@
+{
+  "allBlendShapes": [
+    "jawOpen",
+    "mouthLowerDownLeft",
+    "mouthLowerDownRight",
+    "mouthSmileLeft",
+    "mouthSmileRight",
+    "mouthLeft",
+    "mouthRight",
+    "mouthShrugUpper",
+    "mouthStretchLeft",
+    "mouthStretchRight",
+    "mouthRollLower",
+    "mouthPucker",
+    "mouthFunnel",
+    "mouthRollUpper",
+    "mouthUpperUpLeft",
+    "mouthUpperUpRight",
+    "mouthClose",
+    "mouthShrugLower",
+    "mouthDimpleLeft",
+    "mouthDimpleLeft"
+  ],
+  "data": [
+    {
+      "letters": ["A", "E", "I"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthLowerDownLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLowerDownRight",
+          "weight": "10"
+        },
+        {
+          "name": "mouthSmileLeft",
+          "weight": "20"
+        },
+        {
+          "name": "mouthSmileRight",
+          "weight": "20"
+        }
+      ]
+    },
+
+    {
+      "letters": ["L"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLowerDownLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLowerDownRight",
+          "weight": "10"
+        },
+        {
+          "name": "mouthSmileLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthSmileRight",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLeft",
+          "weight": "5"
+        },
+        {
+          "name": "mouthRight",
+          "weight": "5"
+        },
+        {
+          "name": "mouthShrugUpper",
+          "weight": "15"
+        }
+      ]
+    },
+
+    {
+      "letters": ["O"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthRollLower",
+          "weight": "35"
+        },
+        {
+          "name": "mouthPucker",
+          "weight": "65"
+        },
+        {
+          "name": "mouthFunnel",
+          "weight": "20"
+        },
+        {
+          "name": "mouthShrugUpper",
+          "weight": "60"
+        }
+      ]
+    },
+
+    {
+      "letters": ["C", "D", "G", "K", "N", "S", "T", "X", "Y", "Z", "H"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthRollUpper",
+          "weight": "10"
+        },
+        {
+          "name": "mouthStretchLeft",
+          "weight": "30"
+        },
+        {
+          "name": "mouthStretchRight",
+          "weight": "30"
+        }
+      ]
+    },
+
+    {
+      "letters": ["F", "V"],
+      "shapeData": [
+        {
+          "name": "mouthUpperUpLeft",
+          "weight": "15"
+        },
+        {
+          "name": "mouthUpperUpRight",
+          "weight": "15"
+        },
+        {
+          "name": "mouthLowerDownLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLowerDownRight",
+          "weight": "10"
+        }
+      ]
+    },
+
+    {
+      "letters": ["Q", "W"],
+      "shapeData": [
+        {
+          "name": "mouthUpperUpLeft",
+          "weight": "15"
+        },
+        {
+          "name": "mouthUpperUpRight",
+          "weight": "15"
+        },
+        {
+          "name": "mouthLowerDownLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLowerDownRight",
+          "weight": "10"
+        }
+      ]
+    },
+
+    {
+      "letters": ["B", "M", "P"],
+      "shapeData": [
+        {
+          "name": "mouthClose",
+          "weight": "15"
+        },
+        {
+          "name": "mouthStretchLeft",
+          "weight": "15"
+        },
+        {
+          "name": "mouthStretchRight",
+          "weight": "10"
+        }
+      ]
+    },
+
+    {
+      "letters": ["U"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthRollLower",
+          "weight": "20"
+        },
+        {
+          "name": "mouthPucker",
+          "weight": "65"
+        },
+        {
+          "name": "mouthFunnel",
+          "weight": "20"
+        },
+        {
+          "name": "mouthShrugUpper",
+          "weight": "60"
+        },
+        {
+          "name": "mouthStretchLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthStretchRight",
+          "weight": "10"
+        }
+      ]
+    },
+
+    {
+      "letters": ["EE"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthLowerDownLeft",
+          "weight": "10"
+        },
+        {
+          "name": "mouthLowerDownRight",
+          "weight": "10"
+        },
+        {
+          "name": "mouthSmileLeft",
+          "weight": "30"
+        },
+        {
+          "name": "mouthSmileRight",
+          "weight": "30"
+        },
+        {
+          "name": "mouthShrugLower",
+          "weight": "10"
+        }
+      ]
+    },
+
+    {
+      "letters": ["R"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthUpperUpLeft",
+          "weight": "20"
+        },
+        {
+          "name": "mouthUpperUpRight",
+          "weight": "20"
+        },
+        {
+          "name": "mouthRollLower",
+          "weight": "40"
+        },
+        {
+          "name": "mouthShrugLower",
+          "weight": "50"
+        }
+      ]
+    },
+
+    {
+      "letters": ["TH"],
+      "shapeData": [
+        {
+          "name": "jawOpen",
+          "weight": "20"
+        },
+        {
+          "name": "mouthClose",
+          "weight": "15"
+        },
+        {
+          "name": "mouthDimpleLeft",
+          "weight": "15"
+        },
+        {
+          "name": "mouthDimpleRight",
+          "weight": "15"
+        },
+        {
+          "name": "mouthShrugUpper",
+          "weight": "15"
+        }
+      ]
+    },
+
+    {
+      "letters": ["CH", "J", "SH"],
+      "shapeData": [
+        {
+          "name": "mouthPucker",
+          "weight": "55"
+        },
+        {
+          "name": "mouthFunnel",
+          "weight": "40"
+        },
+        {
+          "name": "mouthShrugUpper",
+          "weight": "70"
+        }
+      ]
+    }
+  ]
+}
