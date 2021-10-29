@@ -157,7 +157,7 @@
     },
 
     {
-      "letters": ["Q", "W"],
+      "letters": ["Q", "W", "WH"],
       "shapeData": [
         {
           "name": "mouthUpperUpLeft",

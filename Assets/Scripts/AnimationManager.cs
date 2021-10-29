@@ -109,12 +109,13 @@ public class AnimationManager : MonoBehaviour {
             startSentenceTS = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
             characterLengths.Clear();
             for(int i = 0; i < words.Length; i++) {
+                string[] word = filterCharacters(words[i]);
                 float prevWordTS = i == 0 ? 0 : timestamps[i - 1];
                 float currWordTS = timestamps[i];
                 float wordDuration = (currWordTS - prevWordTS) * 1000;
-                float charDuration = wordDuration / (i == words.Length - 1 ? words[i].Length + 1 : words[i].Length);
-                foreach(char ch in words[i]) {
-                    characterLengths.Add(new Tuple<string, float>(ch.ToString(), charDuration));
+                float charDuration = wordDuration / (i == words.Length - 1 ? word.Length + 1 : word.Length);
+                foreach(string symbol in word) {
+                    characterLengths.Add(new Tuple<string, float>(symbol, charDuration));
                 }
                 if(i == words.Length - 1) {
                     characterLengths.Add(new Tuple<string, float>("NONE", charDuration));
@@ -175,6 +176,20 @@ public class AnimationManager : MonoBehaviour {
             //double k = 3;
             //return (float)(Math.Atan((t - 0.5) * k) / Math.Atan(0.5 * k) + 1) / 2F;
             return t;
+        }
+
+        static string[] filterCharacters(string word) {
+            List<char> prefixes = new List<char> { 'W', 'C', 'T', 'S' };
+            List<string> symbolList = new List<string>();
+            for(int i = 0; i < word.Length; i++) {
+                if(i < word.Length - 1 && word[i + 1] == 'H' && prefixes.Contains(word[i])) {
+                    symbolList.Add(word[i] + "" + word[i + 1]);
+                    i++;
+                } else {
+                    symbolList.Add(word[i] + "");
+                }
+            }
+            return symbolList.ToArray();
         }
     }
 }
