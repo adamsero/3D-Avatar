@@ -81,16 +81,15 @@ public class AnimationManager : MonoBehaviour {
 
         string[] words = cleanSentence.Split(' ');
         string[] timestamps = timestampsJoined.Split(',');
-        Dictionary<string, float> timestampsForWords = new Dictionary<string, float>();
+        float[] timestampsFloat = new float[timestamps.Length];
         for(int i = 0; i < words.Length; i++) {
-            timestampsForWords.Add(words[i], float.Parse(timestamps[i], System.Globalization.CultureInfo.InvariantCulture));
+            timestampsFloat[i] = float.Parse(timestamps[i], System.Globalization.CultureInfo.InvariantCulture);
         }
-        blendShapeInterpolator.interpolateForSentence(words, timestampsForWords);
+        blendShapeInterpolator.interpolateForSentence(words, timestampsFloat);
     }
 
     private class BlendShapeInterpolator {
         private AnimationManager animationManager;
-        Dictionary<string, float> timestampsForWords = null;
         private List<Tuple<string, float>> characterLengths = new List<Tuple<string, float>>();
         private bool speak = false;
         private int currentCharIndex = -1;
@@ -103,16 +102,15 @@ public class AnimationManager : MonoBehaviour {
             this.animationManager = animationManager;
         }
 
-        public void interpolateForSentence(string[] words, Dictionary<string, float> timestampsForWords) {
-            this.timestampsForWords = timestampsForWords;
+        public void interpolateForSentence(string[] words, float[] timestamps) {
             speak = true;
             currentCharIndex = 0;
             currentReferenceTS = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
             startSentenceTS = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
             characterLengths.Clear();
             for(int i = 0; i < words.Length; i++) {
-                float prevWordTS = i == 0 ? 0 : getTimestampForWord(words[i - 1]);
-                float currWordTS = getTimestampForWord(words[i]);
+                float prevWordTS = i == 0 ? 0 : timestamps[i - 1];
+                float currWordTS = timestamps[i];
                 float wordDuration = (currWordTS - prevWordTS) * 1000;
                 float charDuration = wordDuration / (i == words.Length - 1 ? words[i].Length + 1 : words[i].Length);
                 foreach(char ch in words[i]) {
@@ -171,17 +169,12 @@ public class AnimationManager : MonoBehaviour {
         }
 
         private float timeFunction(float t) {
-            double power = 2;
-            return (float)((1 - Math.Pow(Math.Exp(-t), power)) / (1 - Math.Pow(Math.Exp(-1), power)));
-        }
+            // double power = 2;
+            // return (float)((1 - Math.Pow(Math.Exp(-t), power)) / (1 - Math.Pow(Math.Exp(-1), power)));
 
-        private float getTimestampForWord(string word) {
-            float timestamp;
-            bool foundTimestamp = timestampsForWords.TryGetValue(word, out timestamp);
-            if(!foundTimestamp) {
-                Debug.Log("Could not find timestamp for word " + word);
-            }
-            return timestamp;
+            //double k = 3;
+            //return (float)(Math.Atan((t - 0.5) * k) / Math.Atan(0.5 * k) + 1) / 2F;
+            return t;
         }
     }
 }
