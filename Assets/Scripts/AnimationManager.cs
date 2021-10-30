@@ -49,24 +49,8 @@ public class AnimationManager : MonoBehaviour {
     
     
     void Update() {
-        countFrames();
         blendShapeInterpolator.Update();
     }
-
-    //###TEMPORARY###
-    int frames = 0;
-    long ts = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-    private void countFrames() {
-        frames++;
-        if(frames == 100) {
-            long tsNow = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-            int fps = (int)(1e5 / (tsNow - ts));
-            frames = 0;
-            ts = tsNow;
-            GameObject.Find("DebugLog").GetComponent<Text>().text = "FPS: " + fps;
-        }
-    }
-    //###TEMPORARY###
 
     public void animateFaceForSentence(string sentence, string timestampsJoined) {
         string uppercase = sentence.ToUpper();
